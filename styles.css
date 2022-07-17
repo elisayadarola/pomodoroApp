@@ -57,12 +57,12 @@ progress {
   
 }
 
-/* progress::-webkit-progress-bar {
- background-color: rgba(124, 36, 153, 0.923);
-} */
+progress::-webkit-progress-bar {
+  background:radial-gradient(circle, rgba(63,225,251) 0%, rgba(247,70,252,1) 75%);
+}
 
 progress::-webkit-progress-value {
-  background-color: rgb(226, 43, 171);
+  background-color: whitesmoke;
 }
 
 .timer {
@@ -111,6 +111,12 @@ progress::-webkit-progress-value {
 
 .mode-button.active {
   border-color: white;
+}
+.mode-button:hover{
+  color: white;
+  font-weight: bold;
+  height:28px;
+  background-color: rgb(226, 43, 171) ;
 }
 
 .main-button {
