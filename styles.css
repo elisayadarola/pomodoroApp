@@ -1,0 +1,151 @@
+/* ==========================================================================
+   #POMODORO APP STYLES
+   ========================================================================== */
+
+/**
+ *
+ * Inheriting box sizing slightly better best-practice
+ * https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ *
+ */
+
+/* html {
+  box-sizing: border-box;
+  
+} */
+
+/* *, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Roboto:wght@500;700&display=swap');
+
+@media screen and (max-width: 434px) {
+  .clock {
+    font-size: 8rem;
+  }
+  body {
+    background-image: url("https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171_640.jpg"); background-size: cover; background-position: center center; background-repeat: no-repeat; background-attachment: fixed;
+}
+}
+:root {
+  --pomodoro: rgb(63,225,251);
+  --shortBreak: hsl(90, 59%, 59%);
+  --longBreak: hsl(105, 16%, 40%);
+}
+
+body {
+  background:radial-gradient(circle, rgba(63,225,251) 0%, rgba(247,70,252,1) 75%);
+  background-image: url("https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171_640.jpg");
+  
+background-repeat: no-repeat;
+background-size:cover;
+  transition: background-color 1s ease;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  user-select:none;
+ 
+}
+
+progress {
+  border-radius: 4px;
+  width: 100%;
+  height: 20px;
+  position: fixed;
+  top: 0;
+  
+}
+
+progress::-webkit-progress-bar {
+ background-color: rgba(124, 36, 153, 0.923);
+}
+
+progress::-webkit-progress-value {
+  background-color: rgb(226, 43, 171);
+}
+
+.timer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  text-align: center;
+}
+.main-button:hover{
+  background-color: aqua ;
+  color: #fff;
+  box-shadow: none;
+ 
+  font-weight: bold;
+  text-decoration: wavy;
+  transition:color 1s;
+}
+
+.clock {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-size: 15rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  font-family: arial, sans-serif;
+}
+
+.mode-button {
+  font-size: 16px;
+  height: 28px;
+  cursor: pointer;
+  box-shadow:inset;
+  font-weight: 300;
+  color: #fff;
+  border: 1px solid transparent;
+  margin: 0px;
+  border-radius: 4px;
+  padding: 2px 12px;
+  background: none;
+  
+}
+
+
+.mode-button.active {
+  border-color: white;
+}
+
+.main-button {
+  cursor: pointer;
+  /* box-shadow: rgb(235, 235, 235) 0px 6px 0px; */
+  font-size: 22px;
+  height: 55px;
+  text-transform:uppercase;
+  color: white;
+  font-weight: bold;
+  width: 200px;
+  background-color: rgb(226, 43, 171) ;
+  border-width: initial;
+  border-style: none;
+  margin: 20px 0px 0px;
+  padding: 0px 12px;
+  border-radius: 4px;
+  transition: color 0.5s ease-in-out 0s;
+}
+
+button:focus, button:active {
+  outline: none;
+}
+
+.main-button.active {
+  transform: translateY(6px);
+  box-shadow: none;
+  outline: none;
+}
+
+.hidden {
+  display: none;
+}
+
+
+#js-clock{
+  color:whitesmoke;
+}
