@@ -38,9 +38,9 @@
 
 body {
   background:radial-gradient(circle, rgba(63,225,251) 0%, rgba(247,70,252,1) 75%);
-  background-image: url("https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171_640.jpg");
+  /* background-image: url("https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171_640.jpg");
   
-background-repeat: no-repeat;
+background-repeat: no-repeat; */
 background-size:cover;
   transition: background-color 1s ease;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -57,9 +57,9 @@ progress {
   
 }
 
-progress::-webkit-progress-bar {
+/* progress::-webkit-progress-bar {
  background-color: rgba(124, 36, 153, 0.923);
-}
+} */
 
 progress::-webkit-progress-value {
   background-color: rgb(226, 43, 171);
