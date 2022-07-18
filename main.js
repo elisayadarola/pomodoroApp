@@ -100,7 +100,6 @@ function updateClock() {
 
   const progress = document.getElementById("js-progress");
   progress.value = timer[timer.mode] * 60 - timer.remainingTime.total;
-  console.log("proof");
 }
 
 function switchMode(mode) {
@@ -121,7 +120,6 @@ function switchMode(mode) {
     .setAttribute("max", timer.remainingTime.total);
 
   updateClock();
-  console.log("hola");
 }
 function handleMode(event) {
   const { mode } = event.target.dataset;
