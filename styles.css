@@ -29,6 +29,61 @@
   body {
     background-image: url("https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171_640.jpg"); background-size: cover; background-position: center center; background-repeat: no-repeat; background-attachment: fixed;
 }
+
+}
+p {
+  margin-top: 20px;
+  text-align: center;
+  /* font-weight:bolder; */
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  animation: myAnim 5s ease 0s 1 normal forwards;
+  font-size: large;
+}
+@keyframes myAnim {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 1;
+		transform: translateY(-45px);
+	}
+
+	24% {
+		opacity: 1;
+	}
+
+	40% {
+		animation-timing-function: ease-in;
+		transform: translateY(-24px);
+	}
+
+	65% {
+		animation-timing-function: ease-in;
+		transform: translateY(-12px);
+	}
+
+	82% {
+		animation-timing-function: ease-in;
+		transform: translateY(-6px);
+	}
+
+	93% {
+		animation-timing-function: ease-in;
+		transform: translateY(-4px);
+	}
+
+	25%,
+	55%,
+	75%,
+	87% {
+		animation-timing-function: ease-out;
+		transform: translateY(0px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateY(0px);
+	}
 }
 :root {
   --pomodoro: rgb(63,225,251);
@@ -43,7 +98,7 @@ body {
 background-repeat: no-repeat; */
 background-size:cover;
   transition: background-color 1s ease;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   user-select:none;
  
 }
@@ -58,7 +113,7 @@ progress {
 }
 
 progress::-webkit-progress-bar {
-  background:radial-gradient(circle, rgba(63,225,251) 0%, rgba(247,70,252,1) 75%);
+  background:rgba(247,70,252,1);
 }
 
 progress::-webkit-progress-value {
@@ -72,6 +127,8 @@ progress::-webkit-progress-value {
   transform: translate(-50%, -50%);
   padding: 20px;
   text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: medium;
 }
 .main-button:hover{
   background-color: aqua ;
@@ -86,7 +143,7 @@ progress::-webkit-progress-value {
 .clock {
   margin-top: 50px;
   margin-bottom: 30px;
-  font-size: 15rem;
+  font-size: 10rem;
   line-height: 1;
   display: flex;
   align-items: center;
@@ -94,7 +151,8 @@ progress::-webkit-progress-value {
 }
 
 .mode-button {
-  font-size: 16px;
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   height: 28px;
   cursor: pointer;
   box-shadow:inset;
@@ -135,6 +193,7 @@ progress::-webkit-progress-value {
   padding: 0px 12px;
   border-radius: 4px;
   transition: color 0.5s ease-in-out 0s;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 button:focus, button:active {

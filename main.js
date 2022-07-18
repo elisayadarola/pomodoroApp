@@ -1,3 +1,8 @@
+// we store values on the timer variable, that should contain:
+// the timerthe short break
+// the long break
+// the count after which the long break is activated
+// number of sessions that start as 0
 const timer = {
   pomodoro: 25,
   shortBreak: 5,
@@ -95,6 +100,7 @@ function updateClock() {
 
   const progress = document.getElementById("js-progress");
   progress.value = timer[timer.mode] * 60 - timer.remainingTime.total;
+  console.log("proof");
 }
 
 function switchMode(mode) {
@@ -127,5 +133,25 @@ function handleMode(event) {
   stopTimer();
 }
 document.addEventListener("DOMContentLoaded", () => {
+  // Let's check if the browser supports notifications
+  if ("Notification" in window) {
+    // If notification permissions have neither been granted or denied
+    if (
+      Notification.permission !== "granted" &&
+      Notification.permission !== "denied"
+    ) {
+      // ask the user for permission
+      Notification.requestPermission().then(function (permission) {
+        // If permission is granted
+        if (permission === "granted") {
+          // Create a new notification
+          new Notification(
+            "Awesome! You will be notified at the start of each session"
+          );
+        }
+      });
+    }
+  }
+
   switchMode("pomodoro");
 });
